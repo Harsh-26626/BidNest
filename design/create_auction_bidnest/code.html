@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: { extend: { "colors": { "surface": "#0b1326", "outline-variant": "#47464c", "tertiary-container": "#301b00", "on-background": "#dae2fd", "on-error": "#690005", "on-tertiary-container": "#bd7800", "surface-variant": "#2d3449", "surface-container-high": "#222a3d", "surface-dim": "#0b1326", "on-tertiary-fixed-variant": "#653e00", "surface-container-lowest": "#060e20", "secondary": "#c0c1ff", "on-error-container": "#ffdad6", "on-secondary-fixed": "#07006c", "inverse-primary": "#5d5d6f", "surface-tint": "#c6c4da", "on-secondary-container": "#b0b2ff", "on-secondary-fixed-variant": "#2f2ebe", "on-primary-container": "#868599", "primary-fixed-dim": "#c6c4da", "secondary-container": "#3131c0", "on-secondary": "#1000a9", "inverse-surface": "#dae2fd", "surface-container": "#171f33", "inverse-on-surface": "#283044", "tertiary-fixed": "#ffddb8", "tertiary": "#ffb95f", "on-tertiary-fixed": "#2a1700", "on-surface-variant": "#c8c5cd", "secondary-fixed-dim": "#c0c1ff", "on-tertiary": "#472a00", "outline": "#929097", "surface-container-low": "#131b2e", "primary-container": "#1e1e2e", "primary": "#c6c4da", "surface-container-highest": "#2d3449", "on-primary": "#2f2f40", "on-surface": "#dae2fd", "background": "#0b1326", "tertiary-fixed-dim": "#ffb95f", "error": "#ffb4ab", "surface-bright": "#31394d", "on-primary-fixed": "#1a1a2a", "primary-fixed": "#e3e0f7", "error-container": "#93000a", "secondary-fixed": "#e1e0ff", "on-primary-fixed-variant": "#464557" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-lg": "1.5rem", "margin": "2rem", "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-md": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "tabular-price": ["Inter"], "label-lg": ["Inter"] }, "fontSize": { "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}], "tabular-price": ["20px", {"lineHeight": "24px", "fontWeight": "700"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]} } }}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-tertiary text-[28px]">gavel</span><span class="text-headline-sm text-on-surface tracking-tight font-headline-sm">BidNest</span></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg px-space-md py-space-sm"><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-space-md py-space-sm" data-path="auctions" href="#">Auctions</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-space-md py-space-sm" data-path="create-auction" href="#">Create Auction</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-space-md py-space-sm" data-path="register" href="#">Register</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="hidden lg:inline text-label-lg text-on-surface">Meera Iyer</span><button class="p-space-xs text-on-surface-variant hover:text-tertiary transition-colors" title="Logout"><span class="material-symbols-outlined text-[20px]">logout</span></button></div><button class="md:hidden p-space-xs text-on-surface hover:text-tertiary"><span class="material-symbols-outlined">menu</span></button></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Component: CreateAuctionPage -->
+<div class="max-w-7xl mx-auto w-full px-6 lg:px-12 py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Form -->
+<div class="lg:col-span-7 flex flex-col gap-space-xl">
+<!-- Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm text-tertiary text-label-md uppercase tracking-wider font-label-md">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Asset Submission</span>
+</div>
+<h1 class="text-headline-lg text-on-surface font-headline-lg tracking-tight">Create New Auction</h1>
+<p class="text-body-lg text-on-surface-variant font-body-lg">List your verified asset liquidation or rare collectible for timed bidding.</p>
+</div>
+<!-- Form Element -->
+<form class="flex flex-col gap-space-lg" id="auction-form">
+<!-- 1. Title -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-lg rounded-xl shadow-sm">
+<label class="text-label-lg text-on-surface font-label-lg" for="input-title">Auction Title *</label>
+<input class="bg-surface-container-low text-on-surface px-space-md py-space-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-on-surface-variant/50 text-body-lg font-body-lg" id="input-title" placeholder="e.g. Vintage Leica M3 Camera" type="text" value="Vintage Leica M3 Camera"/>
+<span class="text-error text-body-sm hidden" id="error-title">Please enter a valid auction title.</span>
+</div>
+<!-- 2. Category -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-lg rounded-xl shadow-sm">
+<label class="text-label-lg text-on-surface font-label-lg" for="input-category">Category *</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface px-space-md py-space-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary appearance-none text-body-lg font-body-lg cursor-pointer" id="input-category">
+<option value="Collectibles">Collectibles</option>
+<option value="Sports Memorabilia">Sports Memorabilia</option>
+<option value="Luxury Textiles">Luxury Textiles</option>
+<option value="Musical Instruments">Musical Instruments</option>
+<option value="Experiences">Experiences</option>
+<option value="Gastronomy">Gastronomy</option>
+<option value="Fine Art">Fine Art</option>
+<option value="Getaways">Getaways</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- 3. Description -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-lg rounded-xl shadow-sm">
+<label class="text-label-lg text-on-surface font-label-lg" for="input-description">Description &amp; Provenance</label>
+<textarea class="bg-surface-container-low text-on-surface px-space-md py-space-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-on-surface-variant/50 text-body-md font-body-md resize-none" id="input-description" placeholder="Provide clear provenance and condition notes." rows="4">Mint condition, single-owner vintage rangefinder camera with original Summicron 50mm f/2 lens. Fully serviced in 2023.</textarea>
+<span class="text-on-surface-variant text-body-sm">Provide clear provenance and condition notes.</span>
+</div>
+<!-- 4. Image URLs -->
+<div class="flex flex-col gap-space-md bg-surface-container p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<label class="text-label-lg text-on-surface font-label-lg">Asset Images (Up to 5)</label>
+<span class="text-body-sm text-on-surface-variant" id="image-count">1/5 images</span>
+</div>
+<div class="flex flex-col gap-space-sm" id="image-list">
+<div class="flex items-center gap-space-sm bg-surface-container-low p-space-sm rounded-lg group">
+<div class="w-12 h-12 rounded bg-cover bg-center shrink-0" data-alt="Vintage camera body closeup showing metallic dials and leatherette grip" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3dTrWF1gkn3mu7N2mS8yxKyA7QTFo5YZyaIQKViSQmUxcSGe_DPlK-GVA6EXC0-Y7yEgeGfswWrXYpmBiSN-zsu0ng02w7X5Ia0tjCu12yWD_CrXI_eJjMwWcpG-H52sCgvYEjAyJxR7TqxJ3fJQ7SLqPDxmQ26dK4katGkQ4-WDOdARnBAPmEMSBW-HuZqhIfmFJcx1M96hZaT4rNV7bYyHQi45K94ybCGXbC7gn')"></div>
+<input class="flex-1 bg-transparent text-on-surface text-body-md focus:outline-none truncate image-url-input" type="text" value="https://picsum.photos/seed/leica/800/600"/>
+<button class="p-space-xs text-on-surface-variant hover:text-error transition-colors remove-image-btn" title="Remove image" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex gap-space-sm items-center border border-dashed border-outline-variant p-space-md rounded-lg hover:border-primary transition-colors cursor-pointer" id="add-image-dropzone">
+<span class="material-symbols-outlined text-tertiary">add_photo_alternate</span>
+<input class="flex-1 bg-transparent text-on-surface text-body-md focus:outline-none placeholder:text-on-surface-variant/50" id="new-image-input" placeholder="Paste image URL (e.g. https://...)" type="text"/>
+<button class="bg-primary text-on-primary px-space-md py-space-xs rounded text-label-md font-label-md hover:opacity-90 transition-opacity" id="add-image-btn" type="button">Add</button>
+</div>
+</div>
+<!-- 5 & 6. Starting Price & Bid Step -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-lg rounded-xl shadow-sm">
+<label class="text-label-lg text-on-surface font-label-lg" for="input-price">Starting Price *</label>
+<div class="relative flex items-center">
+<span class="absolute left-space-md text-tertiary font-tabular-price text-tabular-price">₹</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-8 pr-space-md py-space-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-tabular-price text-tabular-price" id="input-price" type="number" value="15000"/>
+</div>
+<span class="text-error text-body-sm hidden" id="error-price">Please enter a valid starting price.</span>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-lg rounded-xl shadow-sm">
+<label class="text-label-lg text-on-surface font-label-lg" for="input-step">Bid Step *</label>
+<div class="relative flex items-center">
+<span class="absolute left-space-md text-tertiary font-tabular-price text-tabular-price">₹</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-8 pr-space-md py-space-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-tabular-price text-tabular-price" id="input-step" type="number" value="1000"/>
+</div>
+<span class="text-on-surface-variant text-body-sm">Used for quick-bid buttons.</span>
+</div>
+</div>
+<!-- 7. Start Time -->
+<div class="flex flex-col gap-space-md bg-surface-container p-space-lg rounded-xl shadow-sm">
+<label class="text-label-lg text-on-surface font-label-lg">Start Time</label>
+<div class="flex bg-surface-container-low p-space-xs rounded-lg w-fit">
+<button class="px-space-md py-space-xs rounded-md bg-primary text-on-primary text-label-md font-label-md transition-colors" data-start-mode="now" type="button">Start Now</button>
+<button class="px-space-md py-space-xs rounded-md text-on-surface-variant hover:text-on-surface text-label-md font-label-md transition-colors" data-start-mode="schedule" type="button">Schedule</button>
+</div>
+<div class="hidden flex flex-col gap-space-xs pt-space-xs" id="schedule-container">
+<input class="bg-surface-container-low text-on-surface px-space-md py-space-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-body-md" id="input-schedule-time" type="datetime-local"/>
+</div>
+</div>
+<!-- 8. Duration -->
+<div class="flex flex-col gap-space-md bg-surface-container p-space-lg rounded-xl shadow-sm">
+<label class="text-label-lg text-on-surface font-label-lg">Auction Duration</label>
+<div class="flex flex-wrap gap-space-sm" id="duration-chips">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-md font-label-md transition-all" data-duration="5m" type="button">5 min</button>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-md font-label-md transition-all" data-duration="15m" type="button">15 min</button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary text-label-md font-label-md transition-all" data-duration="1h" type="button">1 hour</button>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-md font-label-md transition-all" data-duration="24h" type="button">24 hours</button>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-md font-label-md transition-all" data-duration="custom" type="button">Custom</button>
+</div>
+</div>
+<!-- Form Actions -->
+<div class="flex items-center justify-end gap-space-md pt-space-md">
+<button class="px-space-lg py-space-md rounded-xl bg-surface-container-high text-on-surface hover:bg-surface-container-highest text-label-lg font-label-lg transition-colors" id="save-draft-btn" type="button">Save Draft</button>
+<button class="flex items-center gap-space-sm px-space-xl py-space-md rounded-xl bg-primary text-on-primary hover:opacity-90 text-label-lg font-label-lg shadow-lg transition-all" id="publish-btn" type="submit">
+<span>Publish Auction</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Right Column: Live Preview Card -->
+<div class="lg:col-span-5 sticky top-24 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+<span class="text-label-md font-label-md uppercase tracking-wider">Live Preview</span>
+</div>
+<span class="text-body-sm text-on-surface-variant">Updates in real time</span>
+</div>
+<!-- Component: LivePreviewCard -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-xl flex flex-col transition-all duration-300">
+<!-- Card Image Container -->
+<div class="relative h-64 w-full bg-surface-container-low bg-cover bg-center" data-alt="Live preview thumbnail of the listed asset" id="preview-image-container" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDThiM7JyBfsx2eYBzcIIMvZgAhKuKCMDnW4WG7xTwfo9afkyAAjJw18qVSJ1LcV6x_PsGebF8nw6RxiAF8VKBQ8r1me85XLXSw6rYV6QLXs_7pRIhHx9flMhZHE4we0SCRh6tpqWDkGrrv-vbX0BbQclkZaA1pj3cyTD1Z9jZprDYYpKWsguI_pB790j06gTZ50T9FkU37BN7QumIDiq4pEGNrR55-dnR60-gWPNCY')">
+<!-- Badges -->
+<div class="absolute top-space-md left-space-md flex gap-space-xs">
+<span class="bg-tertiary text-on-tertiary px-space-sm py-space-xs rounded-lg text-label-md font-label-md flex items-center gap-space-xs shadow-md">
+<span class="w-2 h-2 rounded-full bg-on-tertiary animate-pulse"></span>
+                Live
+              </span>
+</div>
+<div class="absolute top-space-md right-space-md">
+<span class="bg-surface/80 backdrop-blur-md text-on-surface px-space-sm py-space-xs rounded-lg text-body-sm font-body-sm shadow-md" id="preview-category-badge">
+                Collectibles
+              </span>
+</div>
+</div>
+<!-- Card Content -->
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<h3 class="text-headline-sm text-on-surface font-headline-sm truncate" id="preview-title">Vintage Leica M3 Camera</h3>
+<p class="text-body-sm text-on-surface-variant line-clamp-2" id="preview-description">Mint condition, single-owner vintage rangefinder camera with original Summicron 50mm f/2 lens. Fully serviced in 2023.</p>
+</div>
+<!-- Pricing & Info Grid -->
+<div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+<div class="flex flex-col">
+<span class="text-body-sm text-on-surface-variant">Starting Price</span>
+<span class="text-tabular-price text-tertiary font-tabular-price" id="preview-price">₹15,000</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-body-sm text-on-surface-variant">Time Remaining</span>
+<span class="text-body-md text-on-surface font-medium flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+<span id="preview-duration">01:00:00</span>
+</span>
+</div>
+</div>
+<!-- Quick Action Trigger simulation -->
+<button class="w-full bg-surface-container-high text-on-surface-variant py-space-sm rounded-lg text-label-lg font-label-lg cursor-not-allowed" disabled="" type="button">
+              Place Bid Preview
+            </button>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-[20px]">info</span>
+<p>Your auction will undergo a brief compliance review by BidNest moderators immediately after publishing if total asset value exceeds ₹1,00,000.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-side Interactivity Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const titleInput = document.getElementById('input-title');
+      const categoryInput = document.getElementById('input-category');
+      const descInput = document.getElementById('input-description');
+      const priceInput = document.getElementById('input-price');
+      
+      const previewTitle = document.getElementById('preview-title');
+      const previewDesc = document.getElementById('preview-description');
+      const previewPrice = document.getElementById('preview-price');
+      const previewCategory = document.getElementById('preview-category-badge');
+      const previewImageContainer = document.getElementById('preview-image-container');
+
+      // Real-time binding
+      titleInput.addEventListener('input', (e) => {
+        previewTitle.textContent = e.target.value || 'Untitled Auction';
+      });
+
+      categoryInput.addEventListener('change', (e) => {
+        previewCategory.textContent = e.target.value;
+      });
+
+      descInput.addEventListener('input', (e) => {
+        previewDesc.textContent = e.target.value || 'No description provided.';
+      });
+
+      priceInput.addEventListener('input', (e) => {
+        const val = Number(e.target.value).toLocaleString('en-IN');
+        previewPrice.textContent = '₹' + (val || '0');
+      });
+
+      // Start time mode toggle
+      const startModeBtns = document.querySelectorAll('[data-start-mode]');
+      const scheduleContainer = document.getElementById('schedule-container');
+      startModeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          startModeBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary', 'text-on-primary');
+          btn.classList.remove('text-on-surface-variant');
+
+          if(btn.dataset.startMode === 'schedule') {
+            scheduleContainer.classList.remove('hidden');
+          } else {
+            scheduleContainer.classList.add('hidden');
+          }
+        });
+      });
+
+      // Duration chips toggle
+      const durationChips = document.querySelectorAll('#duration-chips button');
+      const previewDuration = document.getElementById('preview-duration');
+      durationChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          durationChips.forEach(c => {
+            c.classList.remove('bg-primary', 'text-on-primary');
+            c.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          });
+          chip.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          chip.classList.add('bg-primary', 'text-on-primary');
+
+          const dur = chip.dataset.duration;
+          if(dur === '5m') previewDuration.textContent = '00:05:00';
+          else if(dur === '15m') previewDuration.textContent = '00:15:00';
+          else if(dur === '1h') previewDuration.textContent = '01:00:00';
+          else if(dur === '24h') previewDuration.textContent = '24:00:00';
+          else previewDuration.textContent = 'Custom';
+        });
+      });
+
+      // Image management
+      const addImageBtn = document.getElementById('add-image-btn');
+      const newImageInput = document.getElementById('new-image-input');
+      const imageList = document.getElementById('image-list');
+      const imageCount = document.getElementById('image-count');
+
+      function updateImageCount() {
+        const count = imageList.querySelectorAll('.flex').length;
+        imageCount.textContent = count + '/5 images';
+        if(count >= 5) {
+          newImageInput.disabled = true;
+          newImageInput.placeholder = 'Maximum 5 images reached';
+          addImageBtn.disabled = true;
+        } else {
+          newImageInput.disabled = false;
+          newImageInput.placeholder = 'Paste image URL (e.g. https://...)';
+          addImageBtn.disabled = false;
+        }
+      }
+
+      addImageBtn.addEventListener('click', () => {
+        const url = newImageInput.value.trim();
+        if(!url) return;
+        const count = imageList.querySelectorAll('.flex').length;
+        if(count >= 5) return;
+
+        const row = document.createElement('div');
+        row.className = 'flex items-center gap-space-sm bg-surface-container-low p-space-sm rounded-lg group';
+        row.innerHTML = `
+          <div class="w-12 h-12 rounded bg-cover bg-center shrink-0" style="background-image: url('${url}')" data-alt="User uploaded asset photo thumbnail"></div>
+          <input type="text" value="${url}" class="flex-1 bg-transparent text-on-surface text-body-md focus:outline-none truncate image-url-input" />
+          <button type="button" class="p-space-xs text-on-surface-variant hover:text-error transition-colors remove-image-btn" title="Remove image">
+            <span class="material-symbols-outlined text-[20px]">delete</span>
+          </button>
+        `;
+        imageList.appendChild(row);
+        previewImageContainer.style.backgroundImage = `url('${url}')`;
+        newImageInput.value = '';
+        updateImageCount();
+
+        // Bind delete
+        row.querySelector('.remove-image-btn').addEventListener('click', () => {
+          row.remove();
+          updateImageCount();
+        });
+      });
+
+      document.querySelectorAll('.remove-image-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.target.closest('.flex').remove();
+          updateImageCount();
+        });
+      });
+
+      // Validation & Submit
+      const form = document.getElementById('auction-form');
+      const errorTitle = document.getElementById('error-title');
+      const errorPrice = document.getElementById('error-price');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let valid = true;
+
+        if(!titleInput.value.trim()) {
+          errorTitle.classList.remove('hidden');
+          valid = false;
+        } else {
+          errorTitle.classList.add('hidden');
+        }
+
+        if(!priceInput.value || Number(priceInput.value) <= 0) {
+          errorPrice.classList.remove('hidden');
+          valid = false;
+        } else {
+          errorPrice.classList.add('hidden');
+        }
+
+        if(valid) {
+          alert('Auction successfully published and queued for live stream!');
+        }
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-xl"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant text-body-sm"><div>© 2024 BidNest Inc. All rights reserved.</div><div class="flex gap-space-lg"><span>Privacy Policy</span><span>Terms of Service</span><span>Support</span></div></div></footer></body></html>

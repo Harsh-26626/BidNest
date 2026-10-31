@@ -11,7 +11,7 @@ export async function listAuctions({ status, mine, q, page, limit }, userId) {
     ...(status === "upcoming" && { startsAt: { gt: now } }),
     ...(status === "ended" && { endsAt: { lte: now } }),
     ...(mine && { createdById: userId }),
-    ...(q && { title: { contains: q } }),
+    ...(q && { title: { contains: q, mode: "insensitive" } }),
   };
   const orderBy = {
     live: { endsAt: "asc" },

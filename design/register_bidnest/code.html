@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: { extend: { "colors": { "surface": "#0b1326", "outline-variant": "#47464c", "tertiary-container": "#301b00", "on-background": "#dae2fd", "on-error": "#690005", "on-tertiary-container": "#bd7800", "surface-variant": "#2d3449", "surface-container-high": "#222a3d", "surface-dim": "#0b1326", "on-tertiary-fixed-variant": "#653e00", "surface-container-lowest": "#060e20", "secondary": "#c0c1ff", "on-error-container": "#ffdad6", "on-secondary-fixed": "#07006c", "inverse-primary": "#5d5d6f", "surface-tint": "#c6c4da", "on-secondary-container": "#b0b2ff", "on-secondary-fixed-variant": "#2f2ebe", "on-primary-container": "#868599", "primary-fixed-dim": "#c6c4da", "secondary-container": "#3131c0", "on-secondary": "#1000a9", "inverse-surface": "#dae2fd", "surface-container": "#171f33", "inverse-on-surface": "#283044", "tertiary-fixed": "#ffddb8", "tertiary": "#ffb95f", "on-tertiary-fixed": "#2a1700", "on-surface-variant": "#c8c5cd", "secondary-fixed-dim": "#c0c1ff", "on-tertiary": "#472a00", "outline": "#929097", "surface-container-low": "#131b2e", "primary-container": "#1e1e2e", "primary": "#c6c4da", "surface-container-highest": "#2d3449", "on-primary": "#2f2f40", "on-surface": "#dae2fd", "background": "#0b1326", "tertiary-fixed-dim": "#ffb95f", "error": "#ffb4ab", "surface-bright": "#31394d", "on-primary-fixed": "#1a1a2a", "primary-fixed": "#e3e0f7", "error-container": "#93000a", "secondary-fixed": "#e1e0ff", "on-primary-fixed-variant": "#464557" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-lg": "1.5rem", "margin": "2rem", "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-md": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "tabular-price": ["Inter"], "label-lg": ["Inter"] }, "fontSize": { "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}], "tabular-price": ["20px", {"lineHeight": "24px", "fontWeight": "700"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]} } }}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-tertiary text-[28px]">gavel</span><span class="text-headline-sm text-on-surface tracking-tight font-headline-sm">BidNest</span></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg px-space-md py-space-sm"><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-medium rounded-lg px-space-md py-space-sm" data-path="auctions" href="#">Auctions</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-space-md py-space-sm" data-path="create-auction" href="#">Create Auction</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-space-md py-space-sm" data-path="register" href="#">Register</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="hidden lg:inline text-label-lg text-on-surface">Meera Iyer</span><button class="p-space-xs text-on-surface-variant hover:text-tertiary transition-colors" title="Logout"><span class="material-symbols-outlined text-[20px]">logout</span></button></div><button class="md:hidden p-space-xs text-on-surface hover:text-tertiary"><span class="material-symbols-outlined">menu</span></button></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full min-h-[calc(100vh-4rem)]">
+<div class="grid grid-cols-1 lg:grid-cols-12 w-full flex-1">
+<!-- Left Brand Panel -->
+<div class="lg:col-span-5 bg-surface-container-low p-8 lg:p-16 flex flex-col justify-between relative overflow-hidden">
+<!-- Decorative background glow -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 right-0 w-80 h-80 bg-tertiary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 space-y-space-md">
+<div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant text-label-md">
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Verified Bidding Entity</span>
+</div>
+<h1 class="font-headline-lg text-on-surface text-headline-lg tracking-tight">
+          Join India's premier timed auction network
+        </h1>
+<p class="text-on-surface-variant text-body-lg">
+          Gain exclusive access to high-value asset liquidations, rare collectibles, and institutional procurement events with real-time telemetry.
+        </p>
+</div>
+<div class="relative z-10 my-12">
+<div class="grid grid-cols-2 gap-space-lg p-space-lg rounded-xl bg-surface-container/50 backdrop-blur-md">
+<div>
+<div class="font-tabular-price text-tertiary text-headline-md">₹450Cr+</div>
+<div class="text-body-sm text-on-surface-variant mt-space-xs">Total Volume Traded</div>
+</div>
+<div>
+<div class="font-tabular-price text-on-surface text-headline-md">99.8%</div>
+<div class="text-body-sm text-on-surface-variant mt-space-xs">Settlement Success</div>
+</div>
+</div>
+</div>
+<div class="relative z-10 space-y-space-md pt-8">
+<div class="text-label-md text-on-surface-variant uppercase tracking-wider">Trusted by industry leaders</div>
+<div class="flex items-center gap-space-lg opacity-60 grayscale hover:grayscale-0 transition-all">
+<span class="text-headline-sm font-headline-sm tracking-tighter">BOMBAYEX</span>
+<span class="text-headline-sm font-headline-sm tracking-tighter">APEXCAPITAL</span>
+<span class="text-headline-sm font-headline-sm tracking-tighter">NEXUSLTD</span>
+</div>
+</div>
+</div>
+<!-- Right Registration Form Panel -->
+<div class="lg:col-span-7 bg-surface p-8 lg:p-16 flex items-center justify-center">
+<div class="w-full max-w-xl space-y-space-xl">
+<div class="space-y-space-sm">
+<h2 class="font-headline-md text-on-surface text-headline-md">Create your account</h2>
+<p class="text-body-md text-on-surface-variant">Enter your details to register for active bidding credentials.</p>
+</div>
+<form class="space-y-space-lg" id="register-form" onsubmit="handleRegister(event)">
+<div class="space-y-space-xs">
+<label class="block text-label-md text-on-surface" for="fullname">Full Name</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-space-md pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</span>
+<input class="w-full pl-11 pr-4 py-3 bg-surface-container-low text-on-surface text-body-md rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline-variant" id="fullname" placeholder="Aarav Sharma" required="" type="text"/>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="block text-label-md text-on-surface" for="email">Email Address</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-space-md pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</span>
+<input class="w-full pl-11 pr-4 py-3 bg-surface-container-low text-on-surface text-body-md rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline-variant" id="email" placeholder="aarav.sharma@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="block text-label-md text-on-surface" for="phone">Phone Number</label>
+<div class="relative flex">
+<div class="flex items-center pl-4 pr-3 bg-surface-container-high rounded-l-xl text-on-surface-variant text-body-md select-none">
+                +91
+              </div>
+<div class="relative flex-1">
+<input class="w-full px-4 py-3 bg-surface-container-low text-on-surface text-body-md rounded-r-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline-variant" id="phone" pattern="[0-9]{10}" placeholder="98765 43210" required="" title="Enter 10 digit mobile number" type="tel"/>
+</div>
+</div>
+<p class="text-body-sm text-outline-variant pl-1">Required for high-value auction SMS alerts and verification.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="space-y-space-xs">
+<label class="block text-label-md text-on-surface" for="password">Password</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-space-md pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</span>
+<input class="w-full pl-11 pr-4 py-3 bg-surface-container-low text-on-surface text-body-md rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline-variant" id="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="block text-label-md text-on-surface" for="confirm-password">Confirm Password</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-space-md pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">lock_reset</span>
+</span>
+<input class="w-full pl-11 pr-4 py-3 bg-surface-container-low text-on-surface text-body-md rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline-variant" id="confirm-password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-space-sm pt-space-xs">
+<input class="mt-1 w-4 h-4 rounded bg-surface-container-low text-primary focus:ring-primary cursor-pointer accent-primary" id="terms" required="" type="checkbox"/>
+<label class="text-body-sm text-on-surface-variant leading-relaxed select-none cursor-pointer" for="terms">
+              I agree to BidNest's <a class="text-tertiary hover:underline" href="#">Terms of Service</a>, <a class="text-tertiary hover:underline" href="#">Auction Rules</a>, and Privacy Policy, acknowledging that I am legally eligible to participate in timed financial auctions.
+            </label>
+</div>
+<button class="w-full py-4 px-6 bg-primary text-on-primary font-label-lg rounded-xl hover:bg-primary-fixed-dim transition-all flex items-center justify-center gap-space-sm group shadow-lg shadow-primary/10" id="submit-btn" type="submit">
+<span id="btn-text">Complete Registration</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform" id="btn-icon">arrow_forward</span>
+<span class="hidden material-symbols-outlined text-[20px] animate-spin" id="btn-spinner">progress_activity</span>
+</button>
+<div class="text-center pt-space-sm">
+<p class="text-body-md text-on-surface-variant">
+              Already have an account? <a class="text-tertiary font-medium hover:underline" href="#">Log in here</a>
+</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+    function handleRegister(event) {
+      event.preventDefault();
+      const pass = document.getElementById('password').value;
+      const confirmPass = document.getElementById('confirm-password').value;
+
+      if (pass !== confirmPass) {
+        alert('Passwords do not match. Please verify.');
+        return;
+      }
+
+      const btn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnIcon = document.getElementById('btn-icon');
+      const btnSpinner = document.getElementById('btn-spinner');
+
+      btn.disabled = true;
+      btnText.textContent = 'Authenticating Credentials...';
+      btnIcon.classList.add('hidden');
+      btnSpinner.classList.remove('hidden');
+
+      setTimeout(() => {
+        btnText.textContent = 'Account Created Successfully!';
+        btnSpinner.classList.add('hidden');
+        btn.classList.remove('bg-primary', 'hover:bg-primary-fixed-dim');
+        btn.classList.add('bg-tertiary', 'text-on-tertiary');
+        
+        setTimeout(() => {
+          alert('Registration successful! Redirecting to auction dashboard...');
+        }, 500);
+      }, 1500);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-xl"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant text-body-sm"><div>© 2024 BidNest Inc. All rights reserved.</div><div class="flex gap-space-lg"><span>Privacy Policy</span><span>Terms of Service</span><span>Support</span></div></div></footer></body></html>

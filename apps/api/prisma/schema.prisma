@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @default(cuid())
+  name         String    @db.VarChar(80)
+  email        String    @unique @db.VarChar(191)
+  passwordHash String
+  createdAt    DateTime  @default(now())
+  auctions     Auction[]
+  bids         Bid[]
+}
+
+model Auction {
+  id            String   @id @default(cuid())
+  title         String   @db.VarChar(120)
+  description   String   @db.Text
+  images        Json
+  startingPrice Int
+  bidStep       Int      @default(100)
+  highestBid    Int?
+  bidCount      Int      @default(0)
+  startsAt      DateTime
+  endsAt        DateTime
+  createdAt     DateTime @default(now())
+  createdById   String
+  createdBy     User     @relation(fields: [createdById], references: [id])
+  bids          Bid[]
+
+  @@index([endsAt])
+  @@index([startsAt])
+  @@index([createdById])
+}
+
+model Bid {
+  id        String   @id @default(cuid())
+  amount    Int
+  createdAt DateTime @default(now())
+  auctionId String
+  bidderId  String
+  auction   Auction  @relation(fields: [auctionId], references: [id], onDelete: Cascade)
+  bidder    User     @relation(fields: [bidderId], references: [id])
+
+  @@unique([auctionId, amount])
+  @@index([auctionId, createdAt])
+}
